@@ -1,0 +1,92 @@
+:root {
+  --color-logo: #9d8d6c;
+  --color-background: #000;
+  --font-header: "Times New Roman", cursive;
+
+  --step--4: clamp(0.48rem, 0.47rem + 0.06vw, 0.51rem);
+  --step--3: clamp(0.58rem, 0.55rem + 0.12vw, 0.64rem);
+  --step--2: clamp(0.69rem, 0.65rem + 0.21vw, 0.8rem);
+  --step--1: clamp(0.83rem, 0.77rem + 0.33vw, 1rem);
+  --step-0: clamp(1rem, 0.9rem + 0.49vw, 1.25rem);
+  --step-1: clamp(1.2rem, 1.06rem + 0.71vw, 1.56rem);
+  --step-2: clamp(1.44rem, 1.24rem + 1vw, 1.95rem);
+  --step-3: clamp(1.73rem, 1.45rem + 1.39vw, 2.44rem);
+  --step-4: clamp(2.07rem, 1.69rem + 1.91vw, 3.05rem);
+  --step-5: clamp(2.49rem, 1.97rem + 2.59vw, 3.82rem);
+}
+
+header {
+  width: 90%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.625em 3.125em;
+  background-color: var(--color-background);
+  font-family: var(--font-header);
+}
+.header-container {
+  display: grid;
+  grid-template-areas: "profile phone";
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+}
+.profile {
+  grid-area: profile;
+  display: flex;
+  align-items: center;
+  justify-self: self-start;
+}
+.logo img {
+  border-radius: 50%;
+}
+.logotext {
+  margin-left: 1em;
+  font-size: var(--step--1);
+  color: var(--color-logo);
+  font-weight: 500;
+}
+.logotext span {
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.logotext span,
+.phone {
+  font-size: var(--step--2);
+  color: var(--color-logo);
+}
+.phone {
+  grid-area: phone;
+  justify-self: flex-end;
+  align-self: center;
+}
+.phone [class*="fa fa-"]:before {
+  color: whitesmoke;
+  top: 0.125em;
+  right: 0.3em;
+  margin-right: 0.3em;
+}
+.phone p {
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+@media screen and (min-width: 0px) and (max-width: 414px) {
+  header {
+    box-shadow: 0 0 0.05em cyan;
+  }
+  .header-container {
+    padding: 0.625em 0.625em;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  header {
+    box-shadow: 0 0 0.05em cyan;
+  }
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  .logotext {
+    margin: 0.3em auto 0;
+  }
+}
