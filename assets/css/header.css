@@ -1,22 +1,22 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 :root {
   --color-logo: #9d8d6c;
   --color-background: #000;
   --font-header: "Times New Roman", cursive;
 
-  --step--4: clamp(0.48rem, 0.47rem + 0.06vw, 0.51rem);
-  --step--3: clamp(0.58rem, 0.55rem + 0.12vw, 0.64rem);
   --step--2: clamp(0.69rem, 0.65rem + 0.21vw, 0.8rem);
   --step--1: clamp(0.83rem, 0.77rem + 0.33vw, 1rem);
   --step-0: clamp(1rem, 0.9rem + 0.49vw, 1.25rem);
-  --step-1: clamp(1.2rem, 1.06rem + 0.71vw, 1.56rem);
-  --step-2: clamp(1.44rem, 1.24rem + 1vw, 1.95rem);
-  --step-3: clamp(1.73rem, 1.45rem + 1.39vw, 2.44rem);
-  --step-4: clamp(2.07rem, 1.69rem + 1.91vw, 3.05rem);
-  --step-5: clamp(2.49rem, 1.97rem + 2.59vw, 3.82rem);
 }
 
 header {
-  width: 90%;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -80,6 +80,7 @@ header {
 }
 @media screen and (min-width: 0px) and (max-width: 500px) {
   header {
+    padding: 0.625em 1.25em;
     box-shadow: 0 0 0.05em cyan;
   }
   .profile {
